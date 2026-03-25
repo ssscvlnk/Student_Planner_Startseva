@@ -11,6 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+import com.startseva.studentplannerstartseva.navigation.StudentPlannerNavHost
 import com.startseva.studentplannerstartseva.ui.theme.StudentPlannerStartsevaTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,29 +21,14 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             StudentPlannerStartsevaTheme {
+                val navController = rememberNavController()
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    StudentPlannerNavHost(
+                        navController = navController,
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    StudentPlannerStartsevaTheme {
-        Greeting("Android")
     }
 }

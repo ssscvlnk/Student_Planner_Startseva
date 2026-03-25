@@ -63,12 +63,12 @@ fun ProfileScreen(
                     )
                     Spacer(modifier = Modifier.height(16.dp))
                     Text(
-                        text = "Иванов Иван Иванович",
+                        text = "Старцева Полина Сергеевна",
                         style = MaterialTheme.typography.headlineSmall,
                         fontWeight = FontWeight.Bold
                     )
                     Text(
-                        text = "Группа: ИСП-234",
+                        text = "Группа: ИСП-231",
                         style = MaterialTheme.typography.titleMedium,
                         color = MaterialTheme.colorScheme.onPrimaryContainer
                     )
@@ -88,7 +88,7 @@ fun ProfileScreen(
                     ProfileInfoRow(
                         icon = Icons.Default.Email,
                         label = "Email",
-                        value = "ivanov@vgi.volsu.ru"
+                        value = "pstartceva@yandex.ru"
                     )
                     HorizontalDivider()
                     ProfileInfoRow(
@@ -115,7 +115,7 @@ fun ProfileScreen(
                     ) {
                         StatisticItem(
                             label = "Средний балл",
-                            value = "4.7"
+                            value = "5"
                         )
                         StatisticItem(
                             label = "Бонусов",
@@ -123,7 +123,7 @@ fun ProfileScreen(
                         )
                         StatisticItem(
                             label = "Дисциплин",
-                            value = "20"
+                            value = "6"
                         )
                     }
                 }
